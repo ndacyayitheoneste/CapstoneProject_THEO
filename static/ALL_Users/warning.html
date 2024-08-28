@@ -1,0 +1,124 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f3f4f6;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #4a90e2;
+        }
+        a {
+            display: inline-block;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #fff;
+            background: #4a90e2;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #357ab8;
+        }
+        .welcome {
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            color: #333;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img height="50" width="50" src="../ALL_Users/images/logo2.png">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="myindex.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact_Us</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="aboutus.html">About_Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Video -->
+    <video class="video-background" autoplay loop muted>
+        <source src="videos/Crop_Rotation1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Content -->
+     <br>
+    <div class="container">
+        <br><br><br>
+        <i><h1><img height="90" width="80" src="../ALL_Users/images/sorry.jpg">This page is Locked, in case of being maintained,<br>Please contact a system Administrator<br> for more Information or <b>Back Home</b></h1></i>
+        <br>
+        <h3>
+            <ul>
+                <li>Email: ndacyayitheoneste@gmail.com<br><br> Or <br><br> Tel: 0782192051</li>
+            </ul>
+        </h3>
+        <?php if (isset($_SESSION['user_id'])): ?>
+       <img height="100" width="80" src="images/crop02.png"> &nbsp;&nbsp;&nbsp;&nbsp;<a href="../ALL_Users/myindex.html">Back Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<img height="100" width="80" src="images/crop02.png">
+        <?php endif; ?>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6wQ5Hq7r8eXPpmuD85Uc+1v7mQm2D5m3eKfDIwKs3ajA" crossorigin="anonymous"></script>
+</body>
+</html>
